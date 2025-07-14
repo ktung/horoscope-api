@@ -1,0 +1,20 @@
+meta {
+  name: 422 - daily category money not allowed
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{host}}/daily?sign=libra&category=money
+  body: none
+  auth: inherit
+}
+
+params:query {
+  sign: libra
+  category: money
+}
+
+assert {
+  res.status: eq 422
+}

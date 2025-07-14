@@ -1,0 +1,20 @@
+meta {
+  name: 200 - monthly career
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{host}}/monthly?sign=aquarius&category=career
+  body: none
+  auth: inherit
+}
+
+params:query {
+  sign: aquarius
+  category: career
+}
+
+assert {
+  res.status: eq 200
+}

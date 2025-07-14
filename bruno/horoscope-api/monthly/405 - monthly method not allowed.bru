@@ -1,0 +1,19 @@
+meta {
+  name: 405 - monthly method not allowed
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{host}}/monthly?sign=scorpio
+  body: none
+  auth: inherit
+}
+
+params:query {
+  sign: scorpio
+}
+
+assert {
+  res.status: eq 405
+}
