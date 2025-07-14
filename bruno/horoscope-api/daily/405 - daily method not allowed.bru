@@ -1,0 +1,19 @@
+meta {
+  name: 405 - daily method not allowed
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{host}}/daily?sign=virgo
+  body: none
+  auth: inherit
+}
+
+params:query {
+  sign: virgo
+}
+
+assert {
+  res.status: eq 405
+}

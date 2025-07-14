@@ -1,0 +1,20 @@
+meta {
+  name: 200 - daily career
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{host}}/daily?sign=leo&category=career
+  body: none
+  auth: inherit
+}
+
+params:query {
+  sign: leo
+  category: career
+}
+
+assert {
+  res.status: eq 200
+}

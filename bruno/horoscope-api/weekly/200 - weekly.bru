@@ -1,0 +1,19 @@
+meta {
+  name: 200 - weekly
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/weekly?sign=gemini
+  body: none
+  auth: inherit
+}
+
+params:query {
+  sign: gemini
+}
+
+assert {
+  res.status: eq 200
+}

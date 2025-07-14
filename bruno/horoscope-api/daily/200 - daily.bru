@@ -1,0 +1,26 @@
+meta {
+  name: 200 - daily
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/daily?sign=aries
+  body: none
+  auth: inherit
+}
+
+params:query {
+  sign: aries
+}
+
+assert {
+  res.status: eq 200
+}
+
+tests {
+  test("should contains Aries", function () {
+    const data = res.getBody();
+    expect(res.getBody().horoscope).to.contains("Aries");
+  });
+}

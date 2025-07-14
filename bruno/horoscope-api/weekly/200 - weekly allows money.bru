@@ -1,0 +1,20 @@
+meta {
+  name: 200 - weekly allows money
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{host}}/weekly?sign=sagittarius&category=money
+  body: none
+  auth: inherit
+}
+
+params:query {
+  sign: sagittarius
+  category: money
+}
+
+assert {
+  res.status: eq 200
+}

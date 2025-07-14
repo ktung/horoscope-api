@@ -1,0 +1,20 @@
+meta {
+  name: 422 - monthly category money not allowed
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{host}}/monthly?sign=pisces&category=money
+  body: none
+  auth: inherit
+}
+
+params:query {
+  sign: pisces
+  category: money
+}
+
+assert {
+  res.status: eq 422
+}
