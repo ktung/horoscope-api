@@ -28,5 +28,10 @@ go.work.sum
 .env
 
 # Editor/IDE
+.DS_Store
 # .idea/
-# .vscode/
+.vscode/*
+!.vscode/extensions.json
+__debug*
+
+/horoscope-api

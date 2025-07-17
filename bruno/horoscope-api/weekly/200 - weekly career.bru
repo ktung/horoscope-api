@@ -1,0 +1,20 @@
+meta {
+  name: 200 - weekly career
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{host}}/weekly?sign=cancer&category=career
+  body: none
+  auth: inherit
+}
+
+params:query {
+  sign: cancer
+  category: career
+}
+
+assert {
+  res.status: eq 200
+}

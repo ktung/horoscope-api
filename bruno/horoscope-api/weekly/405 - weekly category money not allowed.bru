@@ -1,0 +1,19 @@
+meta {
+  name: 405 - weekly category money not allowed
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{host}}/weekly?sign=scorpio
+  body: none
+  auth: inherit
+}
+
+params:query {
+  sign: scorpio
+}
+
+assert {
+  res.status: eq 405
+}

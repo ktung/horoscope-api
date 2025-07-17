@@ -1,0 +1,19 @@
+meta {
+  name: 200 - monthly
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/monthly?sign=capricorn
+  body: none
+  auth: inherit
+}
+
+params:query {
+  sign: capricorn
+}
+
+assert {
+  res.status: eq 200
+}
