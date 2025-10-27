@@ -34,7 +34,7 @@ jobs:
           bru run --env prod --reporter-html results.html
 
       - name: Upload Test Results
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: test-results
           path: ./bruno/horoscope-api/results.html
